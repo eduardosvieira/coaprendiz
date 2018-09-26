@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CoAprendiz - Login</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="code.js"></script>
+
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper blue">
+        <a class="brand-logo">CoAprendiz</a>
+        <ul id="nav-mobile"  class="right hide-on-med-and-down">
+          <li>
+            <a><i class="material-icons right">settings</i>Configurações</a>
+          </li>
+          <li>
+            <a><i class="material-icons right">exit_to_app</i>Sair</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h3>Configurações</h3>
+
+      <div class="card">
+        <div class="card-content">
+          <h4>Informações Pessoais</h4>
+
+          <label for="">Nome</label>
+          <input type="text">
+
+          <label for="">E-mail</label>
+          <input type="text">
+
+          <label for="">Senha</label>
+          <input type="text">
+
+          <label for="">Confirmar senha</label>
+          <input type="text">
+        </div>
+
+        <div class="card-action">
+          <a href="" class="btn">Editar</a>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-content">
+          <h4>Cadastro de Habilidades</h4>
+          <label for="">Habilidade</label>
+          <select>
+            <option value="" disabled selected>Escolha uma opção</option>
+            <option value="1">Matemática</option>
+            <option value="2">Física</option>
+            <option value="3">Programação</option>
+          </select>
+
+          <label for="Habilidades escolhidas"></label>
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+
+        </div>
+
+        <div class="card-action">
+            <a href="" class="btn">Salvar</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

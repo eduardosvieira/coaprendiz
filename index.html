@@ -1,128 +1,182 @@
-<!DOCTYPE html>
 <html>
   <head>
+    <meta charset='utf-8'>
+    <title>Eduardo</title>
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
     <script
-      src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous">
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous">
     </script>
 
-    <!-- Compiled and minified JavaScript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <script src="code.js">
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <script>
-      $(document).ready(function(){
-        $(document).ready(function(){
-         $('.sidenav').sidenav();
-        });
-
-        $(document).ready(function(){
-         $('.tabs').tabs();
-       });
-      });
     </script>
+
   </head>
-
-  <body>
-
+  <body class="blue-grey lighten-5">
     <nav class="nav-extended blue">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo"><img src="icon.png" alt="">CoAprendiz</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html"><i class="material-icons right">settings</i>Configurações</a></li>
-          <li><a href="collapsible.html"><i class="material-icons right">exit_to_app</i>Sair</a></li>
+        <a class="brand-logo">CoAprendiz</a>
+        <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id = "nav-mobile"  class="right hide-on-med-and-down">
+          <li>
+            <a><i class="material-icons right">settings</i>Configurações</a>
+          </li>
+          <li>
+            <a><i class="material-icons right">exit_to_app</i>Sair</a>
+          </li>
         </ul>
       </div>
       <div class="nav-content">
         <ul class="tabs tabs-transparent">
           <li class="tab"><a href="#interesses">Interesses</a></li>
-          <li class="tab"><a class="active" href="#test2">Conversas</a></li>
-          <li class="tab"><a href="#test3">Pesquisa</a></li>
+          <li class="tab"><a href="#conversas">Conversas</a></li>
+          <li class="tab"><a href="#pesquisa">Pesquisa</a></li>
         </ul>
       </div>
     </nav>
 
-    <ul class="sidenav" id="mobile-demo">
-      <li><a href="sass.html"><i class="material-icons right">settings</i>Configurações</a></li>
-      <li><a href="collapsible.html"><i class="material-icons right">exit_to_app</i>Sair</a></li>
+    <ul class="sidenav" id = "mobile-demo">
+      <li>
+        <a><i class="material-icons right">settings</i>Configurações</a>
+      </li>
+      <li>
+        <a><i class="material-icons right">exit_to_app</i>Sair</a>
+      </li>
     </ul>
 
-    <div class="container">
-    <div id="test2" class="col s12"></div>
-    <div id="test3" class="col s12"></div>
-      <div id="interesses" class="col s12">
+    <div id="interesses" class="col s12">
+      <div class="container">
         <div class="card">
           <div class="card-content">
-            <span class="card-title">Preciso de Ajuda em Matemática</span>
-
-            <div class="row">
-              <div class="col s6">
-                <span class="card-title">Layane 4.5 <i class="material-icons">star</i></span>
-              </div>
-              <div class="col s6">
-                <span class="card-title">2 dias atrás</span>
-              </div>
-            </div>
-            <p>Sobre equação do segundo grau.</p>
+            <span class="card-title">Cartão</span>
           </div>
           <div class="card-action">
-            <a class="waves-effect waves-light btn blue">Ajudar</a>
+            <a class="btn">Botão</a>
           </div>
         </div>
 
-
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title">Preciso de Ajuda em Matemática</span>
-
-            <div class="row">
-              <div class="col s6">
-                <span class="card-title">Layane 4.5 <i class="material-icons">star</i></span>
-              </div>
-              <div class="col s6">
-                <span class="card-title">2 dias atrás</span>
-              </div>
-            </div>
-            <p>Sobre equação do segundo grau.</p>
-          </div>
-          <div class="card-action">
-            <a class="waves-effect waves-light btn blue">Ajudar</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title">Preciso de Ajuda em Matemática</span>
-
-            <div class="row">
-              <div class="col s6">
-                <span class="card-title">Layane 4.5 <i class="material-icons">star</i></span>
-              </div>
-              <div class="col s6">
-                <span class="card-title">2 dias atrás</span>
-              </div>
-            </div>
-            <p>Sobre equação do segundo grau.</p>
-          </div>
-          <div class="card-action">
-            <a class="waves-effect waves-light btn blue">Ajudar</a>
-          </div>
-        </div>
+        <a class="btn-floating btn-large"><i class="material-icons">add</i></a>
       </div>
     </div>
 
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <div id="conversas" class="col s12">
+      <div class="container white">
+        <h2>Conversas</h2>
+        <div id="conversas-painel" >
+          <div class = "conversa">
+
+            <div class="row">
+              <div class="col s1">
+                <img src="doctor.png" alt="" height="80" width="80">
+              </div>
+              <div class="col s11">
+                <h5>Layane</h5>
+
+                <div class="row">
+                  <div class="col s10">
+                    <p>Mensagem</p>
+                  </div>
+                  <div class="col s2">
+                    <p>18h00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class = "conversa">
+
+              <div class="row">
+                <div class="col s1">
+                  <img src="doctor.png" alt="" height="80" width="80">
+                </div>
+                <div class="col s11">
+                  <h5>Layane</h5>
+
+                  <div class="row">
+                    <div class="col s10">
+                      <p>Mensagem</p>
+                    </div>
+                    <div class="col s2">
+                      <p>18h00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class = "conversa">
+
+                <div class="row">
+                  <div class="col s1">
+                    <img src="doctor.png" alt="" height="80" width="80">
+                  </div>
+                  <div class="col s11">
+                    <h5>Layane</h5>
+
+                    <div class="row">
+                      <div class="col s10">
+                        <p>Mensagem</p>
+                      </div>
+                      <div class="col s2">
+                        <p>18h00</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    </div>
+  </div>
+
+  <div id="pesquisa" class="col s12">
+    <div class="container">
+      <h3>Pesquisa</h3>
+
+      <div class="row">
+        <div class="col s10">
+          <input type="text">
+        </div>
+        <div class="col s1 offset-s1">
+          <a href=""><i class="material-icons">search</i></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Cartão</span>
+        </div>
+        <div class="card-action">
+          <a class="btn">Botão</a>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Cartão</span>
+        </div>
+        <div class="card-action">
+          <a class="btn">Botão</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
   </body>
 </html>
