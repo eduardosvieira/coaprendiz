@@ -1,36 +1,18 @@
 <html>
   <head>
-    <meta charset='utf-8'>
-    <title>Eduardo</title>
-
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <script
-			  src="https://code.jquery.com/jquery-3.3.1.js"
-			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-			  crossorigin="anonymous">
-    </script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <script src="code.js">
-
-    </script>
-
+    {% include 'heading.html' %}
   </head>
   <body class="blue-grey lighten-5">
     <nav class="nav-extended blue">
       <div class="nav-wrapper">
-        <a class="brand-logo">CoAprendiz</a>
+        <a class="brand-logo" href="/coaprendiz/">CoAprendiz</a>
         <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id = "nav-mobile"  class="right hide-on-med-and-down">
           <li>
-            <a><i class="material-icons right">settings</i>Configurações</a>
+            <a href="/coaprendiz/settings/"><i class="material-icons right">settings</i>Configurações</a>
           </li>
           <li>
-            <a><i class="material-icons right">exit_to_app</i>Sair</a>
+            <a href="/coaprendiz/logout/"><i class="material-icons right">exit_to_app</i>Sair</a>
           </li>
         </ul>
       </div>
@@ -45,10 +27,10 @@
 
     <ul class="sidenav" id = "mobile-demo">
       <li>
-        <a><i class="material-icons right">settings</i>Configurações</a>
+        <a href="/coaprendiz/settings/"><i class="material-icons right">settings</i>Configurações</a>
       </li>
       <li>
-        <a><i class="material-icons right">exit_to_app</i>Sair</a>
+        <a href="/coaprendiz/logout/"><i class="material-icons right">exit_to_app</i>Sair</a>
       </li>
     </ul>
 
