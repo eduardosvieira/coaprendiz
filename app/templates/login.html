@@ -1,37 +1,10 @@
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>CoAprendiz - Login</title>
-
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <script
-			  src="https://code.jquery.com/jquery-3.3.1.js"
-			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-			  crossorigin="anonymous">
-    </script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <script src="code.js"></script>
-
+    {% include "heading.html" %}
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper blue">
-        <a class="brand-logo">CoAprendiz</a>
-        <ul id="nav-mobile"  class="right hide-on-med-and-down">
-          <li>
-            <a>Entrar</a>
-          </li>
-          <li>
-            <a>Cadastrar-se</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+
+    {% include "menu-login.html" %}
 
     <div class="container">
       <h3>Entrar</h3>

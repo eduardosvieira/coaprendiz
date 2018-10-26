@@ -19,19 +19,9 @@
 
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper blue">
-        <a class="brand-logo">CoAprendiz</a>
-        <ul id="nav-mobile"  class="right hide-on-med-and-down">
-          <li>
-            <a>Entrar</a>
-          </li>
-          <li>
-            <a>Cadastrar-se</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+
+    {% include "menu-login.html" %}
+
 
     <div class="container">
       <h3>Cadastro</h3>
@@ -50,7 +40,7 @@
 
       <div class="row">
         <div class="col s6">
-          <a href="" class="btn">Próximo</a>
+          <a href="/coaprendiz/signup/2/" class="btn">Próximo</a>
         </div>
         <div class="col s6">
           <label for="">Já é cadastrado? </label>

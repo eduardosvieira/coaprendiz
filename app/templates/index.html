@@ -1,52 +1,40 @@
 <html>
   <head>
+    <!--cabecalho -->
     {% include 'heading.html' %}
   </head>
   <body class="blue-grey lighten-5">
-    <nav class="nav-extended blue">
-      <div class="nav-wrapper">
-        <a class="brand-logo" href="/coaprendiz/">CoAprendiz</a>
-        <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id = "nav-mobile"  class="right hide-on-med-and-down">
-          <li>
-            <a href="/coaprendiz/settings/"><i class="material-icons right">settings</i>Configurações</a>
-          </li>
-          <li>
-            <a href="/coaprendiz/logout/"><i class="material-icons right">exit_to_app</i>Sair</a>
-          </li>
-        </ul>
-      </div>
-      <div class="nav-content">
-        <ul class="tabs tabs-transparent">
-          <li class="tab"><a href="#interesses">Interesses</a></li>
-          <li class="tab"><a href="#conversas">Conversas</a></li>
-          <li class="tab"><a href="#pesquisa">Pesquisa</a></li>
-        </ul>
-      </div>
-    </nav>
 
-    <ul class="sidenav" id = "mobile-demo">
-      <li>
-        <a href="/coaprendiz/settings/"><i class="material-icons right">settings</i>Configurações</a>
-      </li>
-      <li>
-        <a href="/coaprendiz/logout/"><i class="material-icons right">exit_to_app</i>Sair</a>
-      </li>
-    </ul>
+    <!-- menu principal -->
+    {% include "main-menu.html" %}
 
     <div id="interesses" class="col s12">
       <div class="container">
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title">Cartão</span>
-          </div>
-          <div class="card-action">
-            <a class="btn">Botão</a>
-          </div>
-        </div>
 
-        <a class="btn-floating btn-large"><i class="material-icons">add</i></a>
+        {% for i in range(3) %}
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Preciso de Ajuda em Matemática</span>
+              <div class="row">
+                <div class="col s9">
+                  <h6>Layane 4.5 <i class="material-icons">star</i></h6>
+                </div>
+                <div class="col s3">
+                  <h6>2 dias atrás</h6>
+                </div>
+              </div>
+              <p>Sobre equação do segundo grau.</p>
+            </div>
+            <div class="card-action">
+              <a class="btn red">Ajudar<i class="material-icons right">thumb_up_alt</i> </a>
+            </div>
+          </div>
+        {% endfor %}
+
+
       </div>
+      <a class="btn-floating btn-large"><i class="material-icons">add</i></a>
+
     </div>
 
     <div id="conversas" class="col s12">
@@ -54,30 +42,10 @@
         <h2>Conversas</h2>
         <div id="conversas-painel" >
           <div class = "conversa">
-
-            <div class="row">
-              <div class="col s1">
-                <img src="doctor.png" alt="" height="80" width="80">
-              </div>
-              <div class="col s11">
-                <h5>Layane</h5>
-
-                <div class="row">
-                  <div class="col s10">
-                    <p>Mensagem</p>
-                  </div>
-                  <div class="col s2">
-                    <p>18h00</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class = "conversa">
-
+            {% for i in range(3) %}
               <div class="row">
                 <div class="col s1">
-                  <img src="doctor.png" alt="" height="80" width="80">
+                  <img src="/static/doctor.png" alt="" height="80" width="80">
                 </div>
                 <div class="col s11">
                   <h5>Layane</h5>
@@ -92,26 +60,8 @@
                   </div>
                 </div>
               </div>
+              {% endfor %}
 
-              <div class = "conversa">
-
-                <div class="row">
-                  <div class="col s1">
-                    <img src="doctor.png" alt="" height="80" width="80">
-                  </div>
-                  <div class="col s11">
-                    <h5>Layane</h5>
-
-                    <div class="row">
-                      <div class="col s10">
-                        <p>Mensagem</p>
-                      </div>
-                      <div class="col s2">
-                        <p>18h00</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
           </div>
         </div>
 
@@ -156,9 +106,6 @@
 
     </div>
   </div>
-
-
-
 
   </body>
 </html>
