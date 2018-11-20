@@ -1,34 +1,90 @@
-<html>
-  <head>
-    {% include "heading.html" %}
+{% include "heading.html" %}
 
-
-  </head>
-  <body>
-    {% include "menu-login.html" %}
-
+<body class="login-page sidebar-collapse">
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
-      <h3>Cadastro</h3>
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="index.html">
+          CoAprendiz </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="login.html" onclick="scrollToDownload()">
+              Entrar
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html" onclick="scrollToDownload()">
+              Cadastrar-se
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank" data-original-title="Siga-nos Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank" data-original-title="Curta-nos Facebook">
+              <i class="fa fa-facebook-square"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Siga-nos Instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-      <label for="">Habilidade</label>
-      <select>
-        <option value="" disabled selected>Escolha uma opção</option>
-        <option value="1">Matemática</option>
-        <option value="2">Física</option>
-        <option value="3">Programação</option>
-      </select>
-
-      <label for="Habilidades escolhidas"></label>
-      <textarea id="textarea1" class="materialize-textarea"></textarea>
-
-
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url({{ url_for('static', filename='imgs/1.jpg') }})">
+    <div class="container">
       <div class="row">
-        <div class="col s6 offset-12">
-          <a href="">Voltar</a>
+        <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+          <div class="card card-login">
+            <form class="form" method="" action="">
+              <div class="card-header card-header-danger text-center">
+                <h4 class="card-title">Etapa 2/2</h4>
 
-          <a href="" class="btn">Próximo</a>
+              </div>
+              <div class="card-body">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons" style="color: red">favorite</i>
+                    </span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Habilidades">
+                  <button class="btn btn-primary btn-fab btn-round">
+                    <i class="material-icons" style="background-color: red">add</i>
+                  </button>
+                </div>
+
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons" style="color: red">favorite</i>
+                    </span>
+                  </div>
+                  <input type="text" class="form-control">
+                </div>
+
+              </div>
+              <div class="footer text-center">
+                <a href="#pablo" class="btn btn-primary btn-link btn-wd btn-lg" style="color: red">Cadastrar-se</a>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </body>
-</html>
+
+{% include "footer.html" %}

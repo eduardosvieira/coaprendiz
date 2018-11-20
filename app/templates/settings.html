@@ -1,69 +1,146 @@
-<html>
-  <head>
-    {% include "heading.html" %}
+{% include "heading.html" %}
 
-  </head>
-  <body>
-    <nav>
-      <div class="nav-wrapper #00796b teal darken-2">
-        <a class="brand-logo" href="/coaprendiz/">CoAprendiz</a>
-        <ul id="nav-mobile"  class="right hide-on-med-and-down">
-          <li>
-            <a href="/coaprendiz/settings/"><i class="material-icons right">settings</i>Configurações</a>
+<body class="profile-page sidebar-collapse">
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="app.html">
+          CoAprendiz </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="profile-page.html" onclick="scrollToDownload()">
+              Eduardo Vieira
+            </a>
           </li>
-          <li>
-            <a href="/coaprendiz/logout/"><i class="material-icons right">exit_to_app</i>Sair</a>
+          <li class="nav-item">
+            <a class="nav-link" href="chat.html" onclick="scrollToDownload()">
+              <i class="material-icons">chat</i> Conversas
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="settings.html" onclick="scrollToDownload()">
+              <i class="material-icons">settings</i> Configurações
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/coaprendiz/logout/" onclick="scrollToDownload()">
+              <i class="material-icons">exit_to_app</i> Sair
+            </a>
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
+  <div class="page-header header-filter" data-parallax="true" style="background-color: black">
     <div class="container">
-      <h3>Configurações</h3>
-
-      <div class="card">
-        <div class="card-content">
-          <h4>Informações Pessoais</h4>
-
-          <label for="">Nome</label>
-          <input type="text">
-
-          <label for="">E-mail</label>
-          <input type="text">
-
-          <label for="">Senha</label>
-          <input type="text">
-
-          <label for="">Confirmar senha</label>
-          <input type="text">
-        </div>
-
-        <div class="card-action">
-          <a href="" class="btn">Editar</a>
-        </div>
-      </div>
-
-
-      <div class="card">
-        <div class="card-content">
-          <h4>Cadastro de Habilidades</h4>
-          <label for="">Habilidade</label>
-          <select>
-            <option value="" disabled selected>Escolha uma opção</option>
-            <option value="1">Matemática</option>
-            <option value="2">Física</option>
-            <option value="3">Programação</option>
-          </select>
-
-          <label for="Habilidades escolhidas"></label>
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-
-        </div>
-
-        <div class="card-action">
-            <a href="" class="btn">Salvar</a>
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+          <div class="brand text-center">
+            <h1>CoAprendiz</h1>
+            <h3 class="title text-center">Sistema de Aprendizagem Colaborativa</h3>
+          </div>
         </div>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+  <div class="main main-raised">
+    <div class="container">
+      <div class="section text-center">
+        <h2 class="title">Configurações</h2>
+      </div>
+
+      <div class="row">
+
+      <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">Informações Pessoais</h4>
+              <p class="category">Mude suas informações pessoais e clique em salvar.</p>
+
+            </div>
+            <div class="card-body">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <label for="">Nome</label>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Nome">
+              </div>
+
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <label for="">E-mail</label>
+                  </span>
+                </div>
+                <input type="email" class="form-control" placeholder="E-mail">
+              </div>
+
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <label for="">Senha</label>
+                  </span>
+                </div>
+                <input type="password" class="form-control" placeholder="Senha">
+              </div>
+
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <label for="">Confirmar senha</label>
+                  </span>
+                </div>
+                <input type="password" class="form-control" placeholder="Senha novamente">
+              </div>
+
+              <button class="btn btn-primary btn-round" style="background-color: red;">
+                <i class="material-icons">save</i> Salvar
+              </button>
+            </div>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Habilidades</h4>
+        <p class="category">Mude suas habilidades e clique em salvar.</p>
+      </div>
+      <div class="card-body">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="material-icons">favorite</i>
+            </span>
+          </div>
+          <input type="text" class="form-control" placeholder="Habilidades">
+          <button class="btn btn-primary btn-fab btn-round">
+            <i class="material-icons">add</i>
+          </button>
+        </div>
+
+        <div class="input-group">
+
+          <input type="text" class="form-control">
+        </div>
+
+        <button class="btn btn-primary btn-round" style="background-color: red;">
+          <i class="material-icons">save</i> Salvar
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+{% include "footer.html" %}

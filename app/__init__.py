@@ -16,13 +16,11 @@ def settings():
     return render_template("settings.html")
 
 
-@app.route("/coaprendiz/signup/1/", methods=["GET"])
-def signup1():
-    return render_template("signup1.html")
+@app.route("/coaprendiz/signup/", methods=["GET"])
+def signup():
+    return render_template("signup.html")
 
 
 @app.route("/coaprendiz/signup/2/", methods=["GET"])
 def signup2():
     return render_template("signup2.html")
-
-

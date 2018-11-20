@@ -1,113 +1,115 @@
-<html>
-  <head>
-    <!--cabecalho -->
-    {% include 'heading.html' %}
+{% include "heading.html" %}
 
-  </head>
-  <body class="blue-grey lighten-5">
+<body class="landing-page sidebar-collapse">
 
-    <!-- menu principal -->
-    {% include "main-menu.html" %}
+  {% include "menu.html" %}
 
-    <div id="interesses" class="col s12">
-      <div class="container">
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url({{ url_for('static', filename='imgs/1.jpg') }})">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="title">Sistema de Aprendizagem Colaborativa.</h1>
+          <h4>Um sistema de aprendizagem colaborativo, onde estudantes que desejam aprender uma nova habilidade encontram outras com conhecimento e disponibilidade para ensiná-las.</h4>
+          <br>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-danger btn-raised btn-lg">
+            <i class="fa fa-play"></i> Assista ao vídeo
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main main-raised">
+    <div class="container">
+      <div class="section text-center">
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto">
+            <h2 class="title">Vamos falar sobre o produto</h2>
+            <h5 class="description">O CoAprendiz é um sistema de aprendizado acadêmico colaborativo. Ele intermediará estudantes interessados em aprender novas habilidades com aqueles que possuem capacidade e disponibilidade para ensiná-las.
 
-        {% for i in range(3) %}
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title">Preciso de Ajuda em Matemática</span>
-              <div class="row">
-                <div class="col s9">
-                  <h6>Layane 4.5 <i class="material-icons">star</i></h6>
+<br>Cada usuário receberá no momento de cadastro um voucher que poderá ser trocado por uma ajuda de outro usuário. O usuário que prestou a ajuda ganha o voucher da pessoa ajudada. Dessa forma, para continuar pedindo ajuda a pessoa é obrigada a ajudar outras pessoas. Ademais o sistema permite a possibilidade de comprar vouchers dentro da aplicação.</h5>
+          </div>
+        </div>
+        <div class="features">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="info">
+                <div class="icon icon-info">
+                  <i class="material-icons">chat</i>
                 </div>
-                <div class="col s3">
-                  <h6>2 dias atrás</h6>
-                </div>
+                <h4 class="info-title">Bate Papo Gratuito</h4>
+                <p>Os usuários conversam entre si combinando o melhor local e horário para ambos por meio do sistema de comunicação do CoAprendiz.</p>
               </div>
-              <p>Sobre equação do segundo grau.</p>
             </div>
-            <div class="card-action">
-              <a class="btn #1f7ea3">Ajudar<i class="material-icons right">thumb_up_alt</i> </a>
+            <div class="col-md-4">
+              <div class="info">
+                <div class="icon icon-success">
+                  <i class="material-icons">verified_user</i>
+                </div>
+                <h4 class="info-title">Usuários Verificados</h4>
+                <p>O CoAprendiz verifica a autenticidade dos usuários por meio da análise da matrícula dos estudantes.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="info">
+                <div class="icon icon-danger">
+                  <i class="material-icons">favorite</i>
+                </div>
+                <h4 class="info-title">Colaborativo</h4>
+                <p>O CoAprendiz estimula a colaboração entre os usuários por meio de sistema de vouchers que podem ser trocados por pedido de ajuda.</p>
+              </div>
             </div>
           </div>
-        {% endfor %}
-
-
+        </div>
       </div>
-      <a class="btn-floating btn-large"><i class="material-icons">add</i></a>
-
-    </div>
-
-    <div id="conversas" class="col s12">
-      <div class="container white">
-        <h2>Conversas</h2>
-        <div id="conversas-painel" >
-          <div class = "conversa">
-            {% for i in range(3) %}
-              <div class="row">
-                <div class="col s1">
-                  <img src="/static/doctor.png" alt="" height="80" width="80">
-                </div>
-                <div class="col s11">
-                  <h5>Layane</h5>
-
-                  <div class="row">
-                    <div class="col s10">
-                      <p>Mensagem</p>
-                    </div>
-                    <div class="col s2">
-                      <p>18h00</p>
-                    </div>
+      <div class="section text-center">
+        <h2 class="title">Aqui está nossa equipe.</h2>
+        <div class="team">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="{{ url_for('static', filename='imgs/layane.jpg') }}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Layane Menezes
+                    <br>
+                    <small class="card-description text-muted">Engenheira da Computação</small>
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-description">Layane é Técnica em Eletrônica pelo Instituto Federal de Educação, Ciência e Tecnológia do Maranhão e está graduando-se em Engenharia da Computação pela Universidade Federal do Maranhão.</p>
+                  </div>
+                  <div class="card-footer justify-content-center">
+                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
+                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
+                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
                   </div>
                 </div>
               </div>
-              {% endfor %}
-
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-    </div>
-  </div>
-
-  <div id="pesquisa" class="col s12">
-    <div class="container">
-      <h3>Pesquisa</h3>
-
-      <div class="row">
-        <div class="col s10">
-          <input type="text">
-        </div>
-        <div class="col s1 offset-s1">
-          <a href=""><i class="material-icons">search</i></a>
-        </div>
-      </div>
-
-      {% for i in range(3) %}
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title">Preciso de Ajuda em Matemática</span>
-            <div class="row">
-              <div class="col s9">
-                <h6>Layane 4.5 <i class="material-icons">star</i></h6>
-              </div>
-              <div class="col s3">
-                <h6>2 dias atrás</h6>
+            </div>
+            <div class="col-md-6">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="{{ url_for('static', filename='imgs/eduardo.jpg') }}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Eduardo Vieira
+                    <br>
+                    <small class="card-description text-muted">Cientista da Computação</small>
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-description">Eduardo é Técnica em Informática pelo Instituto Federal de Educação, Ciência e Tecnológia do Maranhão e está graduando-se em Ciência da Computação pela Universidade Federal do Maranhão.</p>
+                  </div>
+                  <div class="card-footer justify-content-center">
+                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
+                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
               </div>
             </div>
-            <p>Sobre equação do segundo grau.</p>
-          </div>
-          <div class="card-action">
-            <a class="btn #1f7ea3">Ajudar<i class="material-icons right">thumb_up_alt</i> </a>
           </div>
         </div>
-      {% endfor %}
-
+      </div>
     </div>
   </div>
 
-  </body>
-</html>
+{% include "footer.html" %}
