@@ -2,6 +2,9 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+#defining controllers
+from app.controllers.auth import AuthController
+
 #defining route to index
 @app.route("/coaprendiz/", methods=["GET"])
 def index():
