@@ -1,4 +1,4 @@
-import pymysql.cursors
+from pymongo import MongoClient
 
 class DatabaseFactory():
   def __init__(self):
