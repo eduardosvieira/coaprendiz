@@ -1,7 +1,9 @@
-from flask import request
+from flask import request, render_template, session, redirect
 from app import app
 
 from app.models.auth.Auth import Auth
+
+from app.models.User import User
 
 #verifyng login user
 @app.route("/auth/login/", methods=["POST"])
@@ -11,9 +13,15 @@ def auth_login():
 
     result = Auth().login(email=email, password=password)
 
-    print(result)
+    if result:
+        user = User().getUserByEmail(email)
 
-    return "OK"
+        session["_id"] = str(user["_id"])
+        session["email"] = user["email"]
+
+        return redirect("/coaprendiz/")
+    else:
+        return render_template("login.html", error="E-mail ou senha inválidos!")
 
 #registering new user
 @app.route("/auth/signup/", methods=["POST"])

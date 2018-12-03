@@ -10,7 +10,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-6 ml-auto mr-auto">
           <div class="card card-login">
-            <form class="form" method="" action="">
+            <form class="form" method="POST" action="/auth/login/">
               <div class="card-header card-header-danger text-center">
                 <h4 class="card-title">Entrar</h4>
                 <div class="social-line">
@@ -33,7 +33,7 @@
                       <i class="material-icons">mail</i>
                     </span>
                   </div>
-                  <input type="email" class="form-control" placeholder="Email">
+                  <input type="email" name="email" class="form-control" placeholder="Email">
                 </div>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -41,11 +41,11 @@
                       <i class="material-icons">lock_outline</i>
                     </span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Senha">
+                  <input type="password" name="password" class="form-control" placeholder="Senha">
                 </div>
               </div>
               <div class="footer text-center">
-                <a href="#pablo" class="btn btn-primary btn-link btn-wd btn-lg" style="color: red">Entrar</a>
+                <input type="submit" class="btn btn-primary btn-link btn-wd btn-lg" style="color: red" value="Entrar">
               </div>
             </form>
           </div>

@@ -15,7 +15,7 @@ $(document).ready(function(event){
       data: {"email": email, "password": password},
       success: function(data) {
         console.log("Entrar realizado com sucesso.");
-        window.location.replace("/abtms/modules/");            
+        window.location.replace("/abtms/modules/");
       },
       error: function(data) {
         console.log("Houve um problema ao entrar na aplicação.");

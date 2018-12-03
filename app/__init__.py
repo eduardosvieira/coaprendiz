@@ -1,20 +1,27 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, session
 
 app = Flask(__name__)
 
-#defining controllers
+app.config["SECRET_KEY"] = "@secret"
+
 from app.controllers.auth import AuthController
 
 #defining route to index
 @app.route("/coaprendiz/", methods=["GET"])
 def index():
-    return render_template("index.html")
+    if "_id" in session:
+        return render_template("app.html")
+    else:
+        return render_template("index.html")
 
 
 #defining route to login
 @app.route("/coaprendiz/login/", methods=["GET"])
 def login():
-    return render_template("login.html")
+    if "_id" in session:
+        return redirect("/coaprendiz/")
+    else:
+        return render_template("login.html")
 
 
 #defining route to settings
