@@ -31,3 +31,10 @@ def auth_signup():
     password = request.form.get("password")
 
     return "OK"
+
+#logout user
+@app.route("/coaprendiz/logout/", methods=["GET"])
+def logout():
+    session.pop("email", None)
+    session.pop("_id", None)
+    return redirect("/coaprendiz/")
