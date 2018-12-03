@@ -2,7 +2,7 @@ from pymongo import MongoClient
 
 class DatabaseFactory():
   def __init__(self):
-      self.client = MongoClient("mongodb://eduardo:secretPassword@200.137.131.118/classroomdb")
+      self.client = MongoClient("mongodb://127.0.0.1/coaprendizdb")
 
   def getConnection(self):
-    return self.client.classroomdb
+    return self.client.coaprendizdb

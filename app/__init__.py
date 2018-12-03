@@ -8,6 +8,8 @@ from app.controllers.auth import AuthController
 from app.controllers import User
 from app.models.User import User
 
+from app.models.Help import Help
+
 #defining route to index
 @app.route("/coaprendiz/", methods=["GET"])
 def index():
