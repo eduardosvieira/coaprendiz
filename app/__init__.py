@@ -5,12 +5,16 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = "@secret"
 
 from app.controllers.auth import AuthController
+from app.controllers import User
+from app.models.User import User
 
 #defining route to index
 @app.route("/coaprendiz/", methods=["GET"])
 def index():
     if "_id" in session:
-        return render_template("app.html")
+        user = User().getUserByEmail(session["email"])
+
+        return render_template("app.html", user=user)
     else:
         return render_template("index.html")
 
