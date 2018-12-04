@@ -30,8 +30,8 @@
         <div class="row">
           <div class="col-md-5"></div>
           <div class="col-md-7">
-            <button class="btn btn-primary btn-round" style="background-color: red;" data-toggle="modal" data-target="#exampleModal">
-              <i class="material-icons">add</i> Nova Ajuda
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+              Nova Ajuda
             </button>
           </div>
         </div>
@@ -74,4 +74,6 @@
 
   </div>
 
+{% include "modals/helps.html" %}
 {% include "footer.html" %}
+<script src="{{ url_for('static', filename='js/profile-page.js') }}" type="text/javascript"></script>

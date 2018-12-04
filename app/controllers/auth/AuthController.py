@@ -2,7 +2,6 @@ from flask import request, render_template, session, redirect
 from app import app
 
 from app.models.auth.Auth import Auth
-
 from app.models.User import User
 
 #verifyng login user
@@ -30,7 +29,10 @@ def auth_signup():
     email = request.form.get("email")
     password = request.form.get("password")
 
-    return "OK"
+    user = Auth(name=name, email=email, password=password)
+    user.signup(user)
+
+    return redirect("/coaprendiz/login/")
 
 #logout user
 @app.route("/coaprendiz/logout/", methods=["GET"])

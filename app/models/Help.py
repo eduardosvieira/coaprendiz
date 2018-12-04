@@ -3,7 +3,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from app.models.auth.DatabaseFactory import DatabaseFactory
 
 class Help():
-    def __init__(self, id, user, topics, title, description):
+    def __init__(self, id=0, user=None, topics=[], title="", description=""):
         self.id = id
         self.user = user
         self.topics = title
@@ -22,6 +22,7 @@ class Help():
 
             return True
         except:
+            print("Eroorororororo")
             return False
         finally:
             print("Fechando conexão")
