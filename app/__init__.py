@@ -7,6 +7,8 @@ app.config["SECRET_KEY"] = "@secret"
 from app.controllers.auth import AuthController
 from app.controllers import User
 from app.controllers import HelpController
+from app.controllers import SkillController
+
 
 from app.models.User import User
 
