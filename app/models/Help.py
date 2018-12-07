@@ -3,13 +3,15 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from app.models.auth.DatabaseFactory import DatabaseFactory
 
 class Help():
-    def __init__(self, code=0, user=None, skills="", topics=[], title="", description=""):
+    def __init__(self, code=0, user=None, skills="", topics=[], title="", description="", status="Aberta"):
         self.code = code
         self.user = user
         self.skills = skills
         self.topics = topics
         self.title = title
         self.description = description
+        self.status = status
+
         self.connection = DatabaseFactory().getConnection()
 
     def create(self, help=""):
@@ -18,7 +20,8 @@ class Help():
                 "user": help.user,
                 "topics": help.topics,
                 "title": help.title,
-                "description": help.description
+                "description": help.description,
+                "status": self.status
                 })
 
             return True
@@ -32,7 +35,8 @@ class Help():
                 "user": help.user,
                 "topics": help.topics,
                 "title": help.title,
-                "description": help.description
+                "description": help.description,
+                "status": help.status
                 })
 
             return True

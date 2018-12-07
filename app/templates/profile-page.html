@@ -35,44 +35,42 @@
             </button>
           </div>
         </div>
+
+
         <div class="row">
           <div class="col-md-6 ml-auto mr-auto">
             <div class="profile-tabs">
-              <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
-
-                <li class="nav-item">
-                  <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
-                    <i class="material-icons">favorite</i> Habilidades
-                  </a>
-                </li>
-              </ul>
-            </div>
+              <h2>Pedidos de Ajuda</h2>
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Habilidade</th>
+                    <th scope="col">Tópicos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for help in helps %}
+                    <tr>
+                      <th scope="row">{{ help.code }}</th>
+                      <td>{{ help.title }}</td>
+                      <td>{{ help.description }}</td>
+                      <td>{{ help.status }}</td>
+                      <td>{{ help.skills }}</td>
+                      <td>{{ help.topics }}</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
           </div>
         </div>
-        <div class="tab-content tab-space">
-          <div class="tab-pane text-center gallery active" id="favorite">
-            <div class="row">
-              <div class="col-md-3 ml-auto">
-                <h4>Matemática</h4>
-              </div>
-              <div class="col-md-3 mr-auto">
-                <h4>Português</h4>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3 ml-auto">
-                <h4>Programação</h4>
-              </div>
-              <div class="col-md-3 mr-auto">
-                <h4>Física</h4>
-              </div>
-            </div>
-          </div>
+        </div>
         </div>
       </div>
     </div>
-
-  </div>
 
 {% include "modals/helps.html" %}
 {% include "footer.html" %}
