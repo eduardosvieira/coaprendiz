@@ -38,7 +38,7 @@
 
 
         <div class="row">
-          <div class="col-md-6 ml-auto mr-auto">
+          <div>
             <div class="profile-tabs">
               <h2>Pedidos de Ajuda</h2>
               <table class="table table-hover">
@@ -50,17 +50,21 @@
                     <th scope="col">Status</th>
                     <th scope="col">Habilidade</th>
                     <th scope="col">Tópicos</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Remover</th>
                   </tr>
                 </thead>
                 <tbody>
                   {% for help in helps %}
                     <tr>
-                      <th scope="row">{{ help.code }}</th>
+                      <th scope="row">{{ help._id }}</th>
                       <td>{{ help.title }}</td>
                       <td>{{ help.description }}</td>
                       <td>{{ help.status }}</td>
                       <td>{{ help.skills }}</td>
                       <td>{{ help.topics }}</td>
+                      <td><a href=""><i class="material-icons right">edit</i></a></td>
+                      <td><a href=""><i class="material-icons right">delete</i></a></td>
                     </tr>
                   {% endfor %}
                 </tbody>

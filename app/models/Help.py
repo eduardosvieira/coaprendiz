@@ -19,6 +19,7 @@ class Help():
             self.connection.helps.insert({
                 "user": help.user,
                 "topics": help.topics,
+                "skills": help.skills,
                 "title": help.title,
                 "description": help.description,
                 "status": self.status
@@ -58,7 +59,7 @@ class Help():
     def getHelpsByUser(self, email=""):
         try:
             helps = self.connection.helps.find({
-                "email": email
+                "user.email": email
                 })
 
             return helps

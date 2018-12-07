@@ -9,9 +9,11 @@ def create_help():
     title = request.form.get("title")
     description = request.form.get("description")
     topics = request.form.get("topics")
+    skills = request.form.get("skills")
+
     user = User().getUserByEmail(session["email"])
 
-    help = Help(title=title, description=description, topics=topics, user=user)
+    help = Help(title=title, description=description, topics=topics, user=user, skills=skills)
 
     help.create(help)
 

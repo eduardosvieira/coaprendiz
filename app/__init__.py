@@ -37,7 +37,12 @@ def login():
 #defining route to settings
 @app.route("/coaprendiz/settings/", methods=["GET"])
 def settings():
-    return render_template("settings.html")
+    if "_id" in session:
+        user = User().getUserByEmail(session["email"])
+
+        return render_template("settings.html", user=user)
+    else:
+        return render_template("login.html")
 
 
 #defining route to signup
