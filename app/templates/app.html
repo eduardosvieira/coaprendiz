@@ -30,14 +30,21 @@
                 <div class="card-header card-header-danger">
                     <h4 class="card-title">{{ help.title }}</h4>
                     <p class="category">{{ help.description }}</p>
+                    <span class="badge badge-success">{{ help.topics }}</span>
                 </div>
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-2">
-                      <img height="40" width="40" src="{{ url_for('static', filename='imgs/anonimo.jpg') }}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                      <img height="40" width="40" src="{{ url_for('static', filename='imgs/layane.jpg') }}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                     </div>
-                    <div class="col-md-10">
-                      <p>{{ help.user.name }}</p>
+                    <div class="col-md-8">
+                      <p><strong>Layane</strong></p>
+                      <p>{{ user.nPoints }} Pontos</p>
+                    </div>
+                    <div class="col-md-2">
+                      <button id="" type="button" class="btn btn-primary" data-toggle="modal" style="background-color: red">
+                        Ajudar
+                      </button>
                     </div>
                   </div>
                 </div>
