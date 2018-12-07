@@ -19,8 +19,9 @@ from app.models.Help import Help
 def index():
     if "_id" in session:
         user = User().getUserByEmail(session["email"])
+        helps = Help().getAllHelpsBySkills(user["skills"])
 
-        return render_template("app.html", user=user)
+        return render_template("app.html", user=user, helps=helps)
     else:
         return render_template("index.html")
 

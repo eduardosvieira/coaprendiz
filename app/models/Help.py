@@ -67,9 +67,9 @@ class Help():
             print("Houve um problema ao tentar obter ajudas por email.")
             return None
 
-    def getHelpsByTopics(self, topics=[]):
+    def getAllHelpsBySkills(self, skills=[]):
         try:
-            helps = self.connection.helps.find({"topics": { "$all" : topics}})
+            helps = self.connection.helps.find({"skills": { "$all" : skills}})
 
             return helps
         except:
